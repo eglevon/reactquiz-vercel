@@ -2,13 +2,17 @@
     "functions": {
         "api/server.js": {
             "memory": 1024,
-            "includeFiles": "data/questions.json"
+            "includeFiles": "/data/questions.json"
         }
     },
     "rewrites": [
         {
-            "source": "/(.*)",
-            "destination": "api/server.js"
+            "source": "/",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/(.+)",
+            "destination": "/api/server.js"
         }
     ]
 }
