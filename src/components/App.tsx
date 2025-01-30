@@ -89,7 +89,7 @@ export default function App() {
     useEffect(() => {
         async function fetchQuestions() {
             try {
-                const response: Response = await fetch('http://localhost:8000/questions');
+                const response: Response = await fetch('https://reactquiz-questions.vercel.app/questions');
 
                 if (!response.ok) {
                     throw Error({ message: `HTTP error! Status: ${response.status}` });
